@@ -2,6 +2,7 @@
        PROGRAM-ID. FAVS.
       ***** This is an unbelievably simple COBOL program
       ***** GIT SAMPLE
+      ***** NEXT LINE
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        01  FAV-REC.
