@@ -1,0 +1,29 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. FAVS.
+      ***** This is an unbelievably simple COBOL program
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  FAV-REC.
+           05 ARTIST-NAME             PIC X(30).
+           05 NUMBER-OF-MUSICIANS     PIC 9(02).
+           05 MUSICAL-GENRE           PIC X(12).
+           05 COST.
+              10 CD-COST              PIC 9(3)V99.
+              10 SHIPPING-COST        PIC 9(2)V99.
+              10 TAX                  PIC 9(2)V99.
+           05 TOTAL-COST              PIC 9(6)V99.
+           05 BAND-IS-STILL-TOGETHER  PIC X(1).
+       PROCEDURE DIVISION.
+           MOVE "Micale Jaxson"      TO ARTIST-NAME.
+           MOVE 10                   TO NUMBER-OF-MUSICIANS.
+           MOVE 120.14               TO CD-COST.
+           MOVE 20.01                TO SHIPPING-COST.
+           MOVE 10.02                TO TAX.
+           COMPUTE TOTAL-COST = CD-COST + TAX + SHIPPING-COST .
+           DISPLAY "Name: " ARTIST-NAME.
+           DISPLAY "Numbe of Musicians: " NUMBER-OF-MUSICIANS.
+           DISPLAY "CD Cost: " CD-COST.
+           DISPLAY "Shipping Cost: " SHIPPING-COST.
+           DISPLAY "Tax: " TAX.
+           DISPLAY "The Totl Cost is :" COST.
+           GOBACK.
